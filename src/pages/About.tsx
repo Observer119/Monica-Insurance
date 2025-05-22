@@ -41,8 +41,8 @@ const About: React.FC = () => {
             {/* Left Side - About Monica Meier */}
             <div className="space-y-6">
 
-              {/* Über mich Section with Background */}
-              <div className="bg-gray-100 p-6 rounded-lg">
+              {/* Über mich Section - Softest Green */}
+              <div className="bg-green-50 p-6 rounded-lg">
                 <h2 className="text-2xl font-semibold mb-3">Über mich – Monica Meier</h2>
                 <p className="text-lg mb-4">Unabhängige Versicherungsberaterin mit Herz.</p>
                 <p className="text-lg font-medium mb-4">
@@ -51,20 +51,20 @@ const About: React.FC = () => {
                 <p className="text-lg">Ich berate Menschen, nicht Verträge.</p>
               </div>
 
-              {/* What I Offer Section */}
-              <div className="bg-gray-50 p-6 rounded-lg">
+              {/* Was ich anbiete Section - Light Green */}
+              <div className="bg-green-100 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-3">Was ich anbiete:</h3>
                 <p>Ich bringe Struktur, Klarheit und Verlässlichkeit in Ihre Absicherung – ohne Fachsprache, ohne Verkaufsdruck.</p>
               </div>
 
-              {/* What I Don't Do Section */}
-              <div className="bg-gray-50 p-6 rounded-lg">
+              {/* Was ich nicht mache Section - Medium Green */}
+              <div className="bg-green-200 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-3">Was ich nicht mache:</h3>
                 <p>Unnötige Versicherungen verkaufen oder Standardlösungen überstülpen.</p>
               </div>
 
-              {/* Why I Do This Section */}
-              <div className="bg-gray-50 p-6 rounded-lg">
+              {/* Warum ich diesen Weg gehe Section - Soft Green */}
+              <div className="bg-green-300 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-3">Warum ich diesen Weg gehe?</h3>
                 <p className="mb-3">Viele verlieren bei Versicherungen den Überblick – zu viele Begriffe, zu wenig Orientierung.</p>
                 <p className="mb-3">
