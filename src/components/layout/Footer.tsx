@@ -7,6 +7,8 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-dark text-white pt-12 pb-6">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          {/* Standort (Updated to Munich & Germany-wide) */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <img 
@@ -16,28 +18,19 @@ const Footer: React.FC = () => {
               />
             </div>
             <p className="text-gray-300 mb-4">
-              Ihre persönliche Ansprechpartnerin für maßgeschneiderte Versicherungslösungen in Günzburg.
+              Ihre persönliche Ansprechpartnerin für maßgeschneiderte Versicherungslösungen in München und ganz Deutschland.
             </p>
             <div className="flex space-x-4">
-              <a 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white hover:text-primary transition-colors"
-              >
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors">
                 <Facebook size={20} />
               </a>
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-white hover:text-primary transition-colors"
-              >
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors">
                 <Instagram size={20} />
               </a>
             </div>
           </div>
-          
+
+          {/* Kontakt (Updated to include Mobile) */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Kontakt</h3>
             <ul className="space-y-3">
@@ -45,28 +38,27 @@ const Footer: React.FC = () => {
                 <Phone size={18} />
                 <div>
                   <a href="tel:+491711144557" className="text-gray-300 hover:text-primary transition-colors">
-                    +49 171 1144557
+                    Mobil: +49 171 1144557
                   </a>
-                  <span className="text-gray-400 text-sm block">
-                    (auch WhatsApp)
-                  </span>
+                  <span className="text-gray-400 text-sm block">(auch WhatsApp)</span>
                 </div>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail size={18} />
-                <a href="mailto:info@monica-meier.de" className="text-gray-300 hover:text-primary transition-colors">
-                  info@monica-meier.de
+                <a href="mailto:m.meier@vorsorgewerk24.de" className="text-gray-300 hover:text-primary transition-colors">
+                  m.meier@vorsorgewerk24.de
                 </a>
               </li>
             </ul>
           </div>
-          
+
+          {/* Services (Added Private Versicherungen) */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Rechtliches</h3>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/Privateversicherungen" className="text-gray-300 hover:text-primary transition-colors">
-                  Privateversicherungen
+                <Link to="/services/private" className="text-gray-300 hover:text-primary transition-colors">
+                  Private Versicherungen
                 </Link>
               </li>
               <li>
@@ -91,6 +83,7 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
+
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
