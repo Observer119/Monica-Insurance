@@ -36,8 +36,8 @@ const Contact: React.FC = () => {
                     <Phone className="text-primary flex-shrink-0 mt-1" size={24} />
                     <div>
                       <h4 className="font-semibold mb-1">Telefon</h4>
-                      <a href="tel:01711046897" className="text-gray-600 hover:text-primary transition-colors">
-                       +49 171 1144557
+                      <a href="tel:+498920175965" className="text-gray-600 hover:text-primary transition-colors">
+                        +49 89 20175965
                       </a>
                     </div>
                   </div>
@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
                     <div>
                       <h4 className="font-semibold mb-1">E-Mail</h4>
                       <a href="mailto:m.meier@vorsorgewerk24.de" className="text-gray-600 hover:text-primary transition-colors">
-                       m.meier@vorsorgewerk24.de
+                        m.meier@vorsorgewerk24.de
                       </a>
                     </div>
                   </div>
@@ -69,7 +69,7 @@ const Contact: React.FC = () => {
                       <h4 className="font-semibold mb-1">Erreichbarkeit</h4>
                       <p className="text-gray-600">
                         Montag - Freitag: 9:00 - 20:00 Uhr<br />
-                        Samstag: 9:00 - 15:00 Uhr
+                        Samstag: 9:00 - 15:00 Uhr<br />
                         Oder nach Vereinbarung
                       </p>
                     </div>
@@ -77,17 +77,18 @@ const Contact: React.FC = () => {
                 </div>
               </div>
               
-                         {/* Map */}
-            <div className="h-64 bg-gray-300 rounded-lg overflow-hidden">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48892.834583809293!2d11.57549!3d48.13743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e69d9a6c8d8c1%3A0x2fbfcab0d2a9cdee!2sMünchen!5e0!3m2!1sde!2sde!4v1624434146583!5m2!1sde!2sde" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }}
-                allowFullScreen 
-                loading="lazy"
-                title="Standort München"
-              ></iframe>
+              {/* Map */}
+              <div className="h-64 bg-gray-300 rounded-lg overflow-hidden">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48892.834583809293!2d11.57549!3d48.13743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e69d9a6c8d8c1%3A0x2fbfcab0d2a9cdee!2sMünchen!5e0!3m2!1sde!2sde!4v1624434146583!5m2!1sde!2sde" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }}
+                  allowFullScreen 
+                  loading="lazy"
+                  title="Standort München"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
