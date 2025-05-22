@@ -12,10 +12,11 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
               <h1 className="font-bold mb-4">Monica Meier – Ihre unabhängige Versicherungsberaterin in München </h1>
-              <p className="text-xl text-gray-600 mb-6">
-                Erfahren Sie, warum Monica Meier Menschen statt Verträge berät. 
-                Persönlich, unabhängig, verständlich. 
-                Beratung für Privatpersonen & Unternehmen.
+             <p className="text-xl text-gray-600 mb-6">
+            Erfahren Sie, warum Monica Meier Menschen statt Verträge berät.
+              </p>
+              <p className="text-xl text-gray-600">
+              Persönlich, unabhängig, verständlich. Beratung für Privatpersonen &               Unternehmen.
               </p>
             </div>
             <div className="flex justify-center md:justify-end">
