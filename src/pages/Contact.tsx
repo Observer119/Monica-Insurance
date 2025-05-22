@@ -79,15 +79,15 @@ const Contact: React.FC = () => {
               
               {/* Map */}
               <div className="h-64 bg-gray-300 rounded-lg overflow-hidden">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48892.834583809293!2d11.57549!3d48.13743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e69d9a6c8d8c1%3A0x2fbfcab0d2a9cdee!2sMünchen!5e0!3m2!1sde!2sde!4v1624434146583!5m2!1sde!2sde" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }}
-                  allowFullScreen 
-                  loading="lazy"
-                  title="Standort München"
-                ></iframe>
+               <iframe 
+                src="https://www.google.com/maps/embed/v1/place?    key=YOUR_API_KEY&q=München,Germany"
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }}
+                allowFullScreen 
+                loading="lazy"
+                title="Standort München"
+              ></iframe>
               </div>
             </div>
           </div>
