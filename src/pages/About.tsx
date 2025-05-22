@@ -24,7 +24,7 @@ const About: React.FC = () => {
             </div>
             <div className="flex justify-center md:justify-end">
               <img 
-                src="/.jpg" 
+                src="/monica-meier.jpg" 
                 alt="Monica Meier" 
                 className="w-[35mm] h-[45mm] object-cover rounded-lg shadow-lg"
               />
@@ -34,7 +34,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Profile Section */}
-      <section className="section">
+      <div className="section">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
@@ -114,7 +114,7 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };
