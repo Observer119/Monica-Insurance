@@ -7,23 +7,24 @@ import {
   Server,
   Users,
   Shield,
-  HeartHandshake,
-  Briefcase
+  HeartHandshake
 } from 'lucide-react';
 import SectionTitle from '../components/ui/SectionTitle';
 
 interface ServiceItemProps {
   icon: React.ReactNode;
   title: string;
+  description: string;
   items: string[];
 }
 
-const ServiceItem: React.FC<ServiceItemProps> = ({ icon, title, items }) => (
+const ServiceItem: React.FC<ServiceItemProps> = ({ icon, title, description, items }) => (
   <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-all">
     <div className="text-primary mb-4">
       {icon}
     </div>
-    <h3 className="text-xl font-semibold mb-4">{title}</h3>
+    <h3 className="text-xl font-semibold mb-3">{title}</h3>
+    <p className="text-gray-600 mb-4">{description}</p>
     <ul className="space-y-2">
       {items.map((item, index) => (
         <li key={index} className="flex items-center">
@@ -40,6 +41,7 @@ const BusinessServices: React.FC = () => {
     {
       icon: <Gavel size={32} />,
       title: "Haftung & Recht",
+      description: "Für rechtliche Sicherheit bei betrieblichen Tätigkeiten, Produkthaftung und Streitfällen.",
       items: [
         "Betriebshaftpflichtversicherung",
         "Firmenrechtsschutzversicherung",
@@ -49,6 +51,7 @@ const BusinessServices: React.FC = () => {
     {
       icon: <Building2 size={32} />,
       title: "Eigentum & Technik",
+      description: "Absicherung Ihrer Betriebsausstattung, Technik, Maschinen und Firmengebäude.",
       items: [
         "Inhaltsversicherung",
         "Gebäudeversicherung",
@@ -59,6 +62,7 @@ const BusinessServices: React.FC = () => {
     {
       icon: <Zap size={32} />,
       title: "Betriebsunterbrechung",
+      description: "Wenn der Betrieb stillsteht oder die IT versagt – finanzieller Schutz für Notfälle.",
       items: [
         "Ertragsausfall-/Betriebsunterbrechungsversicherung",
         "Notfallplanung",
@@ -68,6 +72,7 @@ const BusinessServices: React.FC = () => {
     {
       icon: <Server size={32} />,
       title: "IT-Sicherheit",
+      description: "Wenn der Betrieb stillsteht oder die IT versagt – finanzieller Schutz für Notfälle.",
       items: [
         "Cyberversicherung",
         "Datenschutzversicherung",
@@ -77,6 +82,7 @@ const BusinessServices: React.FC = () => {
     {
       icon: <Users size={32} />,
       title: "Mitarbeiterbindung",
+      description: "Attraktive Zusatzleistungen für Ihre Mitarbeitenden – steuerlich gefördert und sozial wirksam.",
       items: [
         "Betriebliche Krankenversicherung (bKV)",
         "Gruppenunfallversicherung",
@@ -86,6 +92,7 @@ const BusinessServices: React.FC = () => {
     {
       icon: <HeartHandshake size={32} />,
       title: "Vorsorge",
+      description: "Attraktive Zusatzleistungen für Ihre Mitarbeitenden – steuerlich gefördert und sozial wirksam.",
       items: [
         "Betriebliche Altersvorsorge (bAV)",
         "Geschäftsführer-Versorgung",
@@ -100,12 +107,15 @@ const BusinessServices: React.FC = () => {
       <section className="pt-32 pb-16 bg-gray-light">
         <div className="container-custom">
           <h1 className="font-bold mb-4">Schutz für Ihr Unternehmen und Ihre Mitarbeiter</h1>
+          <p className="text-xl text-gray-600 mb-6">
+            Passgenaue Versicherungslösungen für Ihr Unternehmen – abgestimmt auf Ihre Branche, Mitarbeiterzahl und spezifischen Risiken.
+          </p>
           <p className="text-xl text-gray-600">
             Sind Ihre wichtigsten Unternehmenswerte wirklich umfassend abgesichert? Als Unternehmer tragen Sie große Verantwortung – für Ihr Geschäft, Ihre Mitarbeiter und Ihre Zukunft. Mit unserer unabhängigen Beratung helfen wir Ihnen, betriebliche Risiken frühzeitig zu erkennen und optimal abzusichern.
           </p>
           <div className="mt-8">
             <Link 
-              to="/business/check" 
+              to="/businesskunden/check" 
               className="btn-primary"
             >
               Jetzt ersten Unternehmens-Check durchführen
@@ -129,6 +139,7 @@ const BusinessServices: React.FC = () => {
                 key={index}
                 icon={service.icon}
                 title={service.title}
+                description={service.description}
                 items={service.items}
               />
             ))}
@@ -151,7 +162,7 @@ const BusinessServices: React.FC = () => {
               (Hinweis: Der Check ersetzt keine vollständige Risikoanalyse.)
             </p>
             <Link 
-              to="/business/check" 
+              to="/businesskunden/check" 
               className="btn-primary"
             >
               Jetzt ersten Check durchführen
