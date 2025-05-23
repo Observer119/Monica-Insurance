@@ -61,20 +61,20 @@ const Header: React.FC = () => {
             Arbeitsweise
           </NavLink>
           <NavLink 
-            to="/private" 
+            to="/privatkunden" 
             className={({ isActive }) => 
               `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
             }
           >
-            Private
+            Privatkunden
           </NavLink>
           <NavLink 
-            to="/business" 
+            to="/businesskunden" 
             className={({ isActive }) => 
               `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
             }
           >
-            Business
+            Businesskunden
           </NavLink>
           <NavLink 
             to="/kontakt" 
@@ -127,22 +127,22 @@ const Header: React.FC = () => {
               Arbeitsweise
             </NavLink>
             <NavLink 
-              to="/private" 
+              to="/privatkunden" 
               className={({ isActive }) => 
                 `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
               }
               onClick={() => setIsMenuOpen(false)}
             >
-              Private
+              Privatkunden
             </NavLink>
             <NavLink 
-              to="/business" 
+              to="/businesskunden" 
               className={({ isActive }) => 
                 `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
               }
               onClick={() => setIsMenuOpen(false)}
             >
-              Business
+              Businesskunden
             </NavLink>
             <NavLink 
               to="/kontakt" 
