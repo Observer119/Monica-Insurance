@@ -20,14 +20,12 @@ function App() {
         <Route index element={<Home />} />
         <Route path="ueber-mich" element={<About />} />
         <Route path="arbeitsweise" element={<Process />} />
-        <Route path="services">
-          <Route path="private">
-            <Route index element={<Privatkunden />} />
-            <Route path="check" element={<PrivateCheck />} />
-          </Route>
-          <Route path="business">
-            <Route index element={<Businesskunden />} />
-            <Route path="check" element={<BusinessCheck />} />
+       <Route path="services">
+        <Route path="private" element={<Privatkunden />}>
+          <Route path="check" element={<PrivateCheck />} />
+      </Route>
+      <Route path="business" element={<Businesskunden />}>
+      <Route path="check" element={<BusinessCheck />} />
           </Route>
         </Route>
         <Route path="kontakt" element={<Contact />} />
