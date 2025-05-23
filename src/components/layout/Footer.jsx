@@ -13,7 +13,7 @@ const Footer = () => {
               <span className="font-bold text-xl">Monica Meier</span>
             </div>
             <p className="text-gray-300 mb-4">
-              Ihre persönliche Ansprechpartnerin für maßgeschneiderte Versicherungslösungen in Günzburg.
+              Ihre persönliche Ansprechpartnerin für maßgeschneiderte Versicherungslösungen in München.
             </p>
             <div className="flex space-x-4">
               <a 
@@ -39,8 +39,8 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services/privatkunden" className="text-gray-300 hover:text-primary transition-colors">
-                  Privatkunden
+              <Link to="/services/privatkunden" className="text-gray-300 hover:text-primary transition-colors">
+                Privatkunden
               </Link>
             </li>
             <li>
