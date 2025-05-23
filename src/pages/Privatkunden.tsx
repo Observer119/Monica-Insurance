@@ -1,11 +1,12 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { 
-  Heart, 
-  Home, 
-  PiggyBank, 
-  Lightbulb,
-  Shield
+import {  
+  Heart,  
+  Home,  
+  PiggyBank,  
+  Lightbulb, 
+  Shield 
 } from 'lucide-react';
 import SectionTitle from '../components/ui/SectionTitle';
 
@@ -36,7 +37,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ icon, title, description, ite
   </div>
 );
 
-const Privatkunden: React.FC = () => {
+const Privatkunden = () => {
   const services = [
     {
       icon: <Heart size={32} />,
@@ -67,7 +68,7 @@ const Privatkunden: React.FC = () => {
       bgColor: "bg-blue-50"
     },
     {
-      icon: <PiggyBank size={32} />,
+     icon: <PiggyBank size={32} />,
       title: "Zukunft & Einkommen",
       description: "Vorsorge für Ihre finanzielle Sicherheit - heute und morgen.",
       items: [
@@ -79,7 +80,7 @@ const Privatkunden: React.FC = () => {
       bgColor: "bg-purple-50"
     },
     {
-      icon: <Lightbulb size={32} />,
+    icon: <Lightbulb size={32} />,
       title: "Ergänzende Services",
       description: "Auch über Versicherungen hinaus bestens beraten.",
       items: [
@@ -92,7 +93,7 @@ const Privatkunden: React.FC = () => {
     }
   ];
 
-  return (
+ return (
     <>
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gray-light">
@@ -104,7 +105,7 @@ const Privatkunden: React.FC = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
+    {/* Services Grid */}
       <section className="section">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -139,14 +140,14 @@ const Privatkunden: React.FC = () => {
             Finden Sie es jetzt heraus – in nur 3 Minuten, kostenfrei & unverbindlich!
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link 
-              to="/private/check" 
+            <Link  
+              to="check"  
               className="btn bg-white text-primary hover:bg-gray-100"
             >
               Jetzt Schnellcheck starten
             </Link>
-            <Link 
-              to="/kontakt" 
+            <Link  
+              to="/kontakt"  
               className="btn bg-white/10 text-white hover:bg-white/20"
             >
               Termin vereinbaren
@@ -154,6 +155,9 @@ const Privatkunden: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Outlet for Child Page */}
+      <Outlet />
     </>
   );
 };
