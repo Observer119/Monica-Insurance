@@ -74,7 +74,7 @@ const Footer = () => {
             </div>
             </li>
             <li className="flex items-center space-x-2">
-              <Mail size={18 />
+              <Mail size={18} />
                 <a href="mailto:m.meier@vorsorgewerk24.de" className="text-gray-300 hover:text-primary transition-colors">
                   m.meier@vorsorgewerk24.de
                 </a>
