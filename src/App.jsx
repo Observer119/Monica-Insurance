@@ -9,9 +9,9 @@ import Contact from './pages/Contact';
 import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
 import PrivateCheck from './pages/PrivateCheck';
-import BusinessServices from './pages/BusinessServices';
+import Businesskunden from './pages/Businesskunden';
 import BusinessCheck from './pages/BusinessCheck';
-import PrivateVersicherungen from './pages/Privateversicherungen';
+import Privatkunden from './pages/Privatkunden';
 
 function App() {
   return (
@@ -22,11 +22,11 @@ function App() {
         <Route path="arbeitsweise" element={<Process />} />
         <Route path="services">
           <Route path="private">
-            <Route index element={<PrivateVersicherungen />} />
+            <Route index element={<Privatkunden />} />
             <Route path="check" element={<PrivateCheck />} />
           </Route>
           <Route path="business">
-            <Route index element={<BusinessServices />} />
+            <Route index element={<Businesskunden />} />
             <Route path="check" element={<BusinessCheck />} />
           </Route>
         </Route>
