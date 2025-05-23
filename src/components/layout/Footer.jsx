@@ -39,13 +39,18 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
+                <Link to="/services/privatkunden" className="text-gray-300 hover:text-primary transition-colors">
+                  Privatkunden
+              </Link>
+            </li>
+            <li>
                 <Link to="/private-check" className="text-gray-300 hover:text-primary transition-colors">
                   Private Check
                 </Link>
               </li>
               <li>
-                <Link to="/business" className="text-gray-300 hover:text-primary transition-colors">
-                  Business Services
+                <Link to="/businesskunden" className="text-gray-300 hover:text-primary transition-colors">
+                  Businesskunden
                 </Link>
               </li>
               <li>
@@ -59,14 +64,17 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Kontakt</h3>
             <ul className="space-y-3">
-              <li className="flex items-center space-x-2">
-                <Phone size={18} />
-                <a href="tel:+498920175965" className="text-gray-300 hover:text-primary transition-colors">
-                  +49 89 20175965
-                </a>
-              </li>
-              <li className="flex items-center space-x-2">
-                <Mail size={18} />
+             <li className="flex items-center space-x-2">
+              <Phone size={18} />
+            <div>
+              <a href="tel:+491711144557" className="text-gray-300 hover:text-primary transition-colors">
+                Mobil: +49 171 1144557
+            </a>
+            <span className="text-gray-400 text-sm block">(auch WhatsApp)</span>
+            </div>
+            </li>
+            <li className="flex items-center space-x-2">
+              <Mail size={18 />
                 <a href="mailto:m.meier@vorsorgewerk24.de" className="text-gray-300 hover:text-primary transition-colors">
                   m.meier@vorsorgewerk24.de
                 </a>
