@@ -36,7 +36,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ icon, title, description, ite
   </div>
 );
 
-const PrivateServices: React.FC = () => {
+const Privatkunden: React.FC = () => {
   const services = [
     {
       icon: <Heart size={32} />,
@@ -158,4 +158,4 @@ const PrivateServices: React.FC = () => {
   );
 };
 
-export default PrivateServices;
+export default Privatkunden;
