@@ -59,12 +59,12 @@ const Header = () => {
             Arbeitsweise
           </NavLink>
           <NavLink 
-            to="/services/private" 
+            to="/services/privatkunden" 
             className={({ isActive }) => 
               `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
             }
           >
-            Privatversicherungen
+            Privatkunden
           </NavLink>
           <NavLink 
             to="/services/private/check" 
@@ -75,12 +75,12 @@ const Header = () => {
             Private Check
           </NavLink>
           <NavLink 
-            to="/services/business" 
+            to="/services/businesskunden" 
             className={({ isActive }) => 
               `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
             }
           >
-            Business
+            Businesskunden
           </NavLink>
           <NavLink 
             to="/services/business/check" 
@@ -141,13 +141,13 @@ const Header = () => {
               Arbeitsweise
             </NavLink>
             <NavLink 
-              to="/services/private" 
+              to="/services/privatkunden" 
               className={({ isActive }) => 
                 `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
               }
               onClick={() => setIsMenuOpen(false)}
             >
-              Privatversicherungen
+              Privatkunden
             </NavLink>
             <NavLink 
               to="/services/private/check" 
@@ -159,13 +159,13 @@ const Header = () => {
               Private Check
             </NavLink>
             <NavLink 
-              to="/services/business" 
+              to="/services/Businesskunden" 
               className={({ isActive }) => 
                 `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
               }
               onClick={() => setIsMenuOpen(false)}
             >
-              Business
+              Businesskunden
             </NavLink>
             <NavLink 
               to="/services/business/check" 
