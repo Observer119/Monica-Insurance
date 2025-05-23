@@ -36,7 +36,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ icon, title, description, ite
   </div>
 );
 
-const BusinessServices: React.FC = () => {
+const Businesskunden: React.FC = () => {
   const services = [
     {
       icon: <Gavel size={32} />,
@@ -203,4 +203,4 @@ const BusinessServices: React.FC = () => {
   );
 };
 
-export default BusinessServices;
+export default Businesskunden;
