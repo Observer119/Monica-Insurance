@@ -10,7 +10,7 @@ import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
 import PrivateCheck from './pages/PrivateCheck';
 import Businesskunden from './pages/Businesskunden';
-import BusinessCheck from './pages/BusinessCheck';
+import BusinessCheck from './pages/Businesscheck';
 import Privatkunden from './pages/Privatkunden';
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
           <Route path="check" element={<PrivateCheck />} />
       </Route>
       <Route path="business" element={<Businesskunden />}>
-      <Route path="check" element={<BusinessCheck />} />
+      <Route path="check" element={<Businesscheck />} />
           </Route>
         </Route>
         <Route path="kontakt" element={<Contact />} />
