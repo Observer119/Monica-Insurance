@@ -24,7 +24,7 @@ function App() {
         <Route path="Privatkunden" element={<Privatkunden />}>
           <Route path="check" element={<PrivateCheck />} />
       </Route>
-      <Route path="Business" element={<Businesskunden />}>
+      <Route path="Businesskunden" element={<Businesskunden />}>
       <Route path="Businesscheck" element={<Businesscheck />} />
           </Route>
         </Route>
