@@ -366,4 +366,4 @@ const Businesscheck: React.FC = () => {
   );
 };
 
-export default BusinessCheck;
+export default Businesscheck;
