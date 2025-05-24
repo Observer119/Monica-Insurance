@@ -9,8 +9,8 @@ import Contact from './pages/Contact';
 import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
 import PrivateCheck from './pages/PrivateCheck';
-import Businesskunden from './pages/Businesskunden';
-import Businesscheck from './pages/Businesscheck';
+import Businesskunden from "./pages/Businesskunden";
+import Businesscheck from "./pages/Businesscheck";
 import Privatkunden from './pages/Privatkunden';
 
 function App() {
