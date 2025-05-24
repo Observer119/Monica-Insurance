@@ -21,7 +21,7 @@ function App() {
         <Route path="ueber-mich" element={<About />} />
         <Route path="arbeitsweise" element={<Process />} />
        <Route path="services">
-        <Route path="private" element={<Privatkunden />}>
+        <Route path="Privatkunden" element={<Privatkunden />}>
           <Route path="check" element={<PrivateCheck />} />
       </Route>
       <Route path="business" element={<Businesskunden />}>
