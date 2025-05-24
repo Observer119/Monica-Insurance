@@ -147,7 +147,7 @@ const Businesskunden: React.FC = () => {
         </div>
       </section>
 
-      {/* Business Check CTA */}
+      {/* Businesscheck CTA */}
       <section className="section bg-gray-light">
         <div className="container-custom">
           <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
