@@ -83,7 +83,7 @@ const Header = () => {
             Businesskunden
           </NavLink>
           <NavLink 
-            to="/services/business/check" 
+            to="/services/Business/check" 
             className={({ isActive }) => 
               `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
             }
