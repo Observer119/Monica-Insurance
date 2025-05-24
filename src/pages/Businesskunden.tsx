@@ -115,7 +115,7 @@ const Businesskunden: React.FC = () => {
           </p>
           <div className="mt-8">
             <Link 
-              to="/Business/check" 
+              to="/Businesscheck" 
               className="btn-primary"
             >
               Jetzt ersten Unternehmens-Check durchführen
