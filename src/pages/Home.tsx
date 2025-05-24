@@ -103,7 +103,7 @@ const Home: React.FC = () => {
               <p className="text-gray-600 mb-6">
                 Individuelle Absicherung und Vorsorge für jede Lebensphase - verständlich und auf Ihre Ziele abgestimmt.
               </p>
-              <Link to="/private" className="btn-primary">
+              <Link to="/Privatkunden" className="btn-primary">
                 Erfahren für Privatkunden
               </Link>
             </div>
