@@ -203,4 +203,4 @@ const Businesskunden: React.FC = () => {
   );
 };
 
-export default BusinessServices;
+export default Businesskunden;
