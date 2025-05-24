@@ -20,7 +20,7 @@ interface FormData {
   acceptTerms: boolean;
 }
 
-const Businesscheck: React.FC = () => {
+const BusinessCheck: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     companyName: '',
     businessType: 'selbststaendig',
@@ -112,34 +112,13 @@ const Businesscheck: React.FC = () => {
   };
 
   const insuranceQuestions = [
-    {
-      id: 'hasLiabilityInsurance',
-      question: 'Betriebshaftpflicht oder Vermögensschadenhaftpflicht vorhanden?',
-    },
-    {
-      id: 'hasDisabilityInsurance',
-      question: 'Arbeitskraft abgesichert (z. B. BU, Grundfähigkeit, Dread Disease)?',
-    },
-    {
-      id: 'hasHealthInsurance',
-      question: 'Krankenversicherung passend zur Lebenssituation?',
-    },
-    {
-      id: 'hasRetirementPlan',
-      question: 'Altersvorsorge geplant?',
-    },
-    {
-      id: 'hasPropertyInsurance',
-      question: 'Sachwerte wie Inventar, Gebäude, IT ausreichend abgesichert?',
-    },
-    {
-      id: 'hasEmployeeBenefits',
-      question: 'Steuerlich geförderte Modelle für Mitarbeiterbindung genutzt (bKV / bAV)?',
-    },
-    {
-      id: 'hasInsuranceOverview',
-      question: 'Überblick über bestehende Versicherungen vorhanden?',
-    },
+    { id: 'hasLiabilityInsurance', question: 'Betriebshaftpflicht oder Vermögensschadenhaftpflicht vorhanden?' },
+    { id: 'hasDisabilityInsurance', question: 'Arbeitskraft abgesichert (z. B. BU, Grundfähigkeit, Dread Disease)?' },
+    { id: 'hasHealthInsurance', question: 'Krankenversicherung passend zur Lebenssituation?' },
+    { id: 'hasRetirementPlan', question: 'Altersvorsorge geplant?' },
+    { id: 'hasPropertyInsurance', question: 'Sachwerte wie Inventar, Gebäude, IT ausreichend abgesichert?' },
+    { id: 'hasEmployeeBenefits', question: 'Steuerlich geförderte Modelle für Mitarbeiterbindung genutzt (bKV / bAV)?' },
+    { id: 'hasInsuranceOverview', question: 'Überblick über bestehende Versicherungen vorhanden?' },
   ];
 
   return (
@@ -158,124 +137,19 @@ const Businesscheck: React.FC = () => {
       <section className="section">
         <div className="container-custom max-w-3xl">
           <form onSubmit={handleSubmit} className="space-y-8">
-            {submitted && (
-              <div className="bg-green-100 text-green-800 p-4 rounded-md mb-6">
-                Vielen Dank für Ihre Anfrage. Wir melden uns zeitnah bei Ihnen.
-              </div>
-            )}
-
-            {error && (
-              <div className="bg-red-100 text-red-800 p-4 rounded-md mb-6">
-                {error}
-              </div>
-            )}
-
-            {/* Basic Information */}
-            <div className="space-y-6">
-              <SectionTitle title="Basisdaten" />
-              
-              <div className="space-y-4">
-                <div>
-                  <label htmlFor="companyName" className="block text-sm font-medium text-gray-700 mb-1">
-                    Name / Unternehmen
-                  </label>
-                  <input
-                    type="text"
-                    id="companyName"
-                    name="companyName"
-                    value={formData.companyName}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Geschäftsform
-                  </label>
-                  <div className="flex gap-4">
-                    <label className="flex items-center">
-                      <input
-                        type="radio"
-                        name="businessType"
-                        value="selbststaendig"
-                        checked={formData.businessType === 'selbststaendig'}
-                        onChange={handleChange}
-                        className="mr-2"
-                      />
-                      Selbstständig
-                    </label>
-                    <label className="flex items-center">
-                      <input
-                        type="radio"
-                        name="businessType"
-                        value="unternehmen"
-                        checked={formData.businessType === 'unternehmen'}
-                        onChange={handleChange}
-                        className="mr-2"
-                      />
-                      Unternehmen
-                    </label>
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="industry" className="block text-sm font-medium text-gray-700 mb-1">
-                    Branche / Tätigkeit
-                  </label>
-                  <input
-                    type="text"
-                    id="industry"
-                    name="industry"
-                    value={formData.industry}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="employeeCount" className="block text-sm font-medium text-gray-700 mb-1">
-                    Anzahl der Mitarbeitenden
-                  </label>
-                  <select
-                    id="employeeCount"
-                    name="employeeCount"
-                    value={formData.employeeCount}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
-                  >
-                    <option value="">Bitte wählen</option>
-                    <option value="0">0</option>
-                    <option value="1-5">1–5</option>
-                    <option value="6-20">6–20</option>
-                    <option value="21-50">21–50</option>
-                    <option value="50+">Über 50</option>
-                  </select>
-                </div>
-              </div>
-            </div>
+            {submitted && <div className="bg-green-100 text-green-800 p-4 rounded-md mb-6">Vielen Dank für Ihre Anfrage. Wir melden uns zeitnah bei Ihnen.</div>}
+            {error && <div className="bg-red-100 text-red-800 p-4 rounded-md mb-6">{error}</div>}
 
             {/* Insurance Questions */}
             <div className="space-y-6">
-              <SectionTitle title="Absicherungs- und Vorsorge-Check" />
-              
+              <SectionTitle title="Absicherungs-Check" />
               {insuranceQuestions.map((q) => (
                 <div key={q.id} className="bg-gray-50 p-6 rounded-lg">
                   <p className="font-medium mb-3">{q.question}</p>
                   <div className="flex gap-4">
                     {['Ja', 'Nein', 'Unsicher'].map((option) => (
                       <label key={option} className="flex items-center">
-                        <input
-                          type="radio"
-                          name={q.id}
-                          value={option}
-                          checked={formData[q.id as keyof FormData] === option}
-                          onChange={handleChange}
-                          className="mr-2"
-                        />
+                        <input type="radio" name={q.id} value={option} checked={formData[q.id as keyof FormData] === option} onChange={handleChange} className="mr-2" />
                         {option}
                       </label>
                     ))}
@@ -284,79 +158,8 @@ const Businesscheck: React.FC = () => {
               ))}
             </div>
 
-            {/* Contact Information */}
-            <div className="space-y-6">
-              <SectionTitle title="Kontaktwunsch" />
-              
-              <div className="space-y-4">
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                    Telefonnummer
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    E-Mail-Adresse
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="additionalInfo" className="block text-sm font-medium text-gray-700 mb-1">
-                    Was ist Ihnen besonders wichtig? (optional)
-                  </label>
-                  <textarea
-                    id="additionalInfo"
-                    name="additionalInfo"
-                    value={formData.additionalInfo}
-                    onChange={handleChange}
-                    rows={4}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Terms Acceptance */}
-            <div className="flex items-start space-x-2">
-              <input
-                type="checkbox"
-                id="acceptTerms"
-                name="acceptTerms"
-                checked={formData.acceptTerms}
-                onChange={handleChange}
-                required
-                className="mt-1"
-              />
-              <label htmlFor="acceptTerms" className="text-sm text-gray-600">
-                Ich stimme der Verarbeitung meiner Daten gemäß Datenschutzbestimmungen zu.
-              </label>
-            </div>
-
             {/* Submit Button */}
-            <button
-              type="submit"
-              className="btn-primary w-full"
-              disabled={!formData.acceptTerms || isSubmitting}
-            >
+            <button type="submit" className="btn-primary w-full" disabled={!formData.acceptTerms || isSubmitting}>
               {isSubmitting ? 'Wird gesendet...' : 'Unternehmens-Check absenden'}
             </button>
           </form>
@@ -366,4 +169,4 @@ const Businesscheck: React.FC = () => {
   );
 };
 
-export default Businesscheck;
+export default BusinessCheck;
