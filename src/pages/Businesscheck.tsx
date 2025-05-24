@@ -20,7 +20,7 @@ interface FormData {
   acceptTerms: boolean;
 }
 
-const BusinessCheck: React.FC = () => {
+const Businesscheck: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     companyName: '',
     businessType: 'selbststaendig',
