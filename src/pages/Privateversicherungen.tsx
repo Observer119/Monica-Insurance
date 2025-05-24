@@ -158,4 +158,4 @@ const Privatkunden: React.FC = () => {
   );
 };
 
-export default PrivateServices;
+export default Privatkunden;
