@@ -20,7 +20,7 @@ function App() {
         <Route path="arbeitsweise" element={<Process />} />
         <Route path="fuer-wen" element={<TargetAudience />} />
         <Route path="services">
-          <Route path="private">
+          <Route path="Privatkunden">
             <Route index element={<Privatkunden />} />
             <Route path="check" element={<PrivateCheck />} />
           </Route>
