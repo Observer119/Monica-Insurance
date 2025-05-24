@@ -30,7 +30,7 @@ const TargetAudience: React.FC = () => {
                 Individuelle Absicherung und Vorsorge für jede Lebensphase - verständlich und auf Ihre Ziele abgestimmt.
               </p>
               <Link 
-                to="/services/private" 
+                to="/services/Privatkunden" 
                 className="btn-primary inline-flex items-center"
               >
                 Mehr erfahren für Privatkunden
