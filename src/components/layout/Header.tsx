@@ -136,7 +136,7 @@ const Header: React.FC = () => {
               Privatkunden
             </NavLink>
             <NavLink 
-              to="/businesskunden" 
+              to="/Businesskunden" 
               className={({ isActive }) => 
                 `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
               }
