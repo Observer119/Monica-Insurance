@@ -75,7 +75,7 @@ const Header = () => {
             Private Check
           </NavLink>
           <NavLink 
-            to="/services/businesskunden" 
+            to="/services/Businesskunden" 
             className={({ isActive }) => 
               `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
             }
