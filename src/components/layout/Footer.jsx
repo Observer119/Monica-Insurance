@@ -55,7 +55,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/Businesscheck" className="text-gray-300 hover:text-primary transition-colors">
-                  Business Check
+                  Businesscheck
                 </Link>
               </li>
             </ul>
