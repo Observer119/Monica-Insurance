@@ -74,12 +74,12 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/businesskunden/check" className="text-gray-300 hover:text-primary transition-colors">
-        Businesskunden Check
+        Businesscheck
             </Link>
         </li>
         <li>
           <Link to="/business/check" className="text-gray-300 hover:text-primary transition-colors">
-                  Business Check
+                  Businesscheck
                 </Link>
               </li>
               <li>
