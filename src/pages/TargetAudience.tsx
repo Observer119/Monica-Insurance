@@ -47,7 +47,7 @@ const TargetAudience: React.FC = () => {
                 Strategische Versicherungslösungen für Unternehmer und Betriebe - mit Fokus auf Absicherung, Mitarbeiterbindung und Zukunftssicherheit.
               </p>
               <Link 
-                to="/services/business" 
+                to="/services/businesskunden" 
                 className="btn-primary inline-flex items-center"
               >
                 Mehr erfahren für Unternehmen
