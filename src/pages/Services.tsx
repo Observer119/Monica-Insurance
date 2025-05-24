@@ -37,7 +37,7 @@ const Services: React.FC = () => {
     }
   ];
 
-  const businesskunden = [
+  const Businesskunden = [
     {
       icon: Building,
       title: "Unternehmensabsicherung",
