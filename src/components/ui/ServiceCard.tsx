@@ -1,5 +1,5 @@
 import React from 'react';
-import { LucideIcon } from 'lucide-react';
+import { DivideIcon as LucideIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface ServiceCardProps {
@@ -23,3 +23,5 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon: Icon, title, descriptio
     </div>
   );
 };
+
+export default ServiceCard
