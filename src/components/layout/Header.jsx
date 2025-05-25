@@ -174,7 +174,7 @@ const Header = () => {
               }
               onClick={() => setIsMenuOpen(false)}
             >
-              Businesscheck
+              BusinessCheck
             </NavLink>
             <NavLink 
               to="/kontakt" 
