@@ -74,25 +74,25 @@ const PrivateCheck: React.FC = () => {
       return {
         color: 'green',
         icon: <CheckCircle className="w-12 h-12 text-green-500" />,
-        title: 'Gut abgesichert',
+        title: 'Sehr gut abgesichert',
         message: 'Sie haben bereits eine solide Absicherung. Ein kurzer Check kann dennoch Optimierungspotenzial aufzeigen.',
-        actionText: 'Jetzt optimieren?'
+        actionText: 'Jetzt optimieren'
       };
     } else if (score >= 3) {
       return {
         color: 'yellow',
         icon: <AlertTriangle className="w-12 h-12 text-yellow-500" />,
-        title: 'Verbesserungspotenzial',
+        title: 'Verbesserungspotenzial vorhanden',
         message: 'Es bestehen einige Lücken in Ihrer Absicherung. Lassen Sie uns gemeinsam daran arbeiten.',
-        actionText: 'Jetzt handeln!'
+        actionText: 'Jetzt verbessern'
       };
     } else {
       return {
         color: 'red',
         icon: <Shield className="w-12 h-12 text-red-500" />,
-        title: 'Handlungsbedarf',
+        title: 'Dringender Handlungsbedarf',
         message: 'Ihre Absicherung weist wichtige Lücken auf. Lassen Sie uns schnell einen Termin vereinbaren.',
-        actionText: 'Jetzt Schutz aufbauen!'
+        actionText: 'Jetzt absichern'
       };
     }
   };
@@ -142,7 +142,7 @@ const PrivateCheck: React.FC = () => {
         setSubmitted(false);
       }, 5000);
     } catch (err) {
-      setError('Es gab einen Fehler beim Senden des Formulars. Bitte versuchen Sie es später erneut.');
+      setError('Entschuldigung, es gab einen Fehler beim Senden des Formulars. Bitte versuchen Sie es später erneut.');
       console.error('EmailJS Error:', err);
     } finally {
       setIsSubmitting(false);
@@ -152,27 +152,27 @@ const PrivateCheck: React.FC = () => {
   const insuranceQuestions = [
     {
       id: 'hasLiabilityInsurance',
-      question: 'Haben Sie eine private Haftpflichtversicherung?'
+      question: 'Haben Sie eine Privathaftpflichtversicherung?'
     },
     {
       id: 'hasHealthInsurance',
-      question: 'Deckt Ihre Krankenversicherung Ihre aktuellen Bedürfnisse?'
+      question: 'Entspricht Ihre Krankenversicherung Ihren aktuellen Bedürfnissen?'
     },
     {
       id: 'hasIncomeProtection',
-      question: 'Ist Ihr Einkommen bei längerer Krankheit oder Berufsunfähigkeit abgesichert?'
+      question: 'Ist Ihr Einkommen bei längerer Krankheit oder Berufsunfähigkeit geschützt?'
     },
     {
       id: 'hasDeathCoverage',
-      question: 'Haben Sie Ihre Angehörigen im Todesfall abgesichert?'
+      question: 'Sind Ihre Angehörigen im Todesfall finanziell abgesichert?'
     },
     {
       id: 'hasRetirementPlan',
-      question: 'Haben Sie für Ihren Ruhestand vorgesorgt?'
+      question: 'Haben Sie bereits für Ihren Ruhestand vorgesorgt?'
     },
     {
       id: 'hasInsuranceOverview',
-      question: 'Haben Sie einen Überblick über Ihre bestehenden Versicherungen?'
+      question: 'Haben Sie einen klaren Überblick über Ihre bestehenden Versicherungen?'
     }
   ];
 
@@ -180,9 +180,9 @@ const PrivateCheck: React.FC = () => {
     <>
       <section className="pt-32 pb-16 bg-gray-light">
         <div className="container-custom">
-          <h1 className="font-bold mb-4">Versicherungs-Schnellcheck</h1>
+          <h1 className="font-bold mb-4">Persönlicher Versicherungs-Check</h1>
           <p className="text-xl text-gray-600">
-            In nur 3 Minuten eine erste Einschätzung Ihrer Absicherung erhalten – kostenfrei, unverbindlich und einfach erklärt.
+            In nur 3 Minuten erhalten Sie eine erste Einschätzung Ihrer Absicherung – kostenfrei und unverbindlich.
           </p>
         </div>
       </section>
@@ -202,34 +202,34 @@ const PrivateCheck: React.FC = () => {
               </div>
             )}
 
-            {/* Life Situation */}
             <div className="space-y-6">
-              <SectionTitle title="Teil 1 – Ihre Lebenssituation" />
+              <SectionTitle title="Teil 1 – Ihre persönliche Situation" />
               
               <div className="bg-white p-6 rounded-lg shadow-sm">
-                <p className="font-medium mb-4">In welcher Lebenssituation befinden Sie sich?</p>
+                <p className="font-medium mb-4">Wie ist Ihre aktuelle Lebenssituation?</p>
                 <div className="space-x-6">
-                  {['single', 'partnership', 'family'].map((situation) => (
-                    <label key={situation} className="inline-flex items-center">
+                  {[
+                    { value: 'single', label: 'Single' },
+                    { value: 'partnership', label: 'Partnerschaft' },
+                    { value: 'family', label: 'Familie' }
+                  ].map(({ value, label }) => (
+                    <label key={value} className="inline-flex items-center">
                       <input
                         type="radio"
                         name="lifeSituation"
-                        value={situation}
-                        checked={formData.lifeSituation === situation}
+                        value={value}
+                        checked={formData.lifeSituation === value}
                         onChange={handleChange}
                         className="mr-2"
                       />
-                      <span className="capitalize">
-                        {situation === 'partnership' ? 'Partnerschaft' : 
-                         situation === 'family' ? 'Familie' : 'Single'}
-                      </span>
+                      {label}
                     </label>
                   ))}
                 </div>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-sm">
-                <p className="font-medium mb-4">Gab es kürzlich Veränderungen in Ihrem Leben?</p>
+                <p className="font-medium mb-4">Gab es kürzlich wichtige Veränderungen in Ihrem Leben?</p>
                 <div className="space-x-6 mb-4">
                   {['Ja', 'Nein', 'Unsicher'].map((option) => (
                     <label key={option} className="inline-flex items-center">
@@ -249,14 +249,14 @@ const PrivateCheck: React.FC = () => {
                 {formData.recentChanges === 'Ja' && (
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Welche Veränderung hat stattgefunden?
+                      Welche Veränderungen haben stattgefunden?
                     </label>
                     <input
                       type="text"
                       name="changeDetails"
                       value={formData.changeDetails}
                       onChange={handleChange}
-                      placeholder="z.B. Umzug, Familienzuwachs, Berufswechsel"
+                      placeholder="z.B. Umzug, Familienzuwachs, neuer Job"
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
                     />
                   </div>
@@ -264,9 +264,8 @@ const PrivateCheck: React.FC = () => {
               </div>
             </div>
 
-            {/* Insurance Questions */}
             <div className="space-y-6">
-              <SectionTitle title="Teil 2 – Absicherungs- und Vorsorge-Check" />
+              <SectionTitle title="Teil 2 – Ihr Versicherungsschutz" />
               
               {insuranceQuestions.map((q) => (
                 <div key={q.id} className="bg-white p-6 rounded-lg shadow-sm">
@@ -290,10 +289,9 @@ const PrivateCheck: React.FC = () => {
               ))}
             </div>
 
-            {/* Results */}
             {showResults && (
               <div className="space-y-6">
-                <SectionTitle title="Ihre Auswertung" />
+                <SectionTitle title="Ihre persönliche Auswertung" />
                 
                 <div className="bg-white p-8 rounded-lg shadow-lg text-center">
                   {getResultStatus().icon}
@@ -314,7 +312,6 @@ const PrivateCheck: React.FC = () => {
               </div>
             )}
 
-            {/* Contact Form */}
             <div className="space-y-6">
               <SectionTitle title="Ihre Kontaktdaten" />
               
@@ -418,7 +415,7 @@ const PrivateCheck: React.FC = () => {
                 className="btn-primary flex-1"
                 disabled={!formData.consent || isSubmitting}
               >
-                {isSubmitting ? 'Wird gesendet...' : 'Selbst-Check absenden'}
+                {isSubmitting ? 'Wird gesendet...' : 'Versicherungs-Check absenden'}
               </button>
             </div>
           </form>
