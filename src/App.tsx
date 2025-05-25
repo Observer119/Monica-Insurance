@@ -26,7 +26,7 @@ function App() {
           </Route>
           <Route path="services">
             <Route index element={<Businesskunden />} />
-            <Route path="Businesscheck" element={<Businesscheck />} />
+            <Route path="BusinessCheck" element={<BusinessCheck />} />
           </Route>
         </Route>
         <Route path="kontakt" element={<Contact />} />
