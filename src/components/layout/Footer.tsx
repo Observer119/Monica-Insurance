@@ -68,8 +68,8 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/private/check" className="text-gray-300 hover:text-primary transition-colors">
-                  Private Check
+                <Link to="/PrivateCheck" className="text-gray-300 hover:text-primary transition-colors">
+                  PrivateCheck
                 </Link>
               </li>
               <li>
