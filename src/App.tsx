@@ -22,14 +22,11 @@ function App() {
         <Route path="fuer-wen" element={<TargetAudience />} />
 
         {/* Services Section */}
-        <Route path="services" element={<Services />}>
-          <Route path="Privatkunden" element={<Privatkunden />}>
-            <Route path="PrivateCheck" element={<PrivateCheck />} />
-          </Route>
-          <Route path="Businesskunden" element={<Businesskunden />}>
-            <Route path="BusinessCheck" element={<BusinessCheck />} />
-          </Route>
-        </Route>
+        <Route path="services" element={<Services />} />
+        <Route path="services/Privatkunden" element={<Privatkunden />} />
+        <Route path="services/Privatkunden/PrivateCheck" element={<PrivateCheck />} />
+        <Route path="services/Businesskunden" element={<Businesskunden />} />
+        <Route path="services/Businesskunden/BusinessCheck" element={<BusinessCheck />} />
 
         {/* Other Pages */}
         <Route path="kontakt" element={<Contact />} />
