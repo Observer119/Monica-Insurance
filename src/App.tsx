@@ -28,7 +28,7 @@ function App() {
         <Route path="services/businesskunden" element={<Businesskunden />} />
         <Route path="services/businesskunden/business-check" element={<BusinessCheck />} />
 
-        {/* Other Pages */}
+        {/* Legal and Contact Pages */}
         <Route path="kontakt" element={<Contact />} />
         <Route path="impressum" element={<Impressum />} />
         <Route path="datenschutz" element={<Datenschutz />} />
