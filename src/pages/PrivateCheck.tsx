@@ -120,6 +120,24 @@ const PrivateCheck: React.FC = () => {
       );
 
       setSubmitted(true);
+      setFormData({
+        lifeSituation: '',
+        recentChanges: '',
+        changeDetails: '',
+        hasLiabilityInsurance: '',
+        hasHealthInsurance: '',
+        hasIncomeProtection: '',
+        hasDeathCoverage: '',
+        hasRetirementPlan: '',
+        hasInsuranceOverview: '',
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        additionalInfo: '',
+        consent: false,
+      });
+
       setTimeout(() => {
         setSubmitted(false);
       }, 5000);
