@@ -14,7 +14,7 @@ import SectionTitle from '../components/ui/SectionTitle';
 import ServiceCard from '../components/ui/ServiceCard';
 
 const Services: React.FC = () => {
-  const Privatkunden = [
+  const privatkunden = [
     {
       icon: Heart,
       title: "Gesundheitsabsicherung",
@@ -23,7 +23,7 @@ const Services: React.FC = () => {
     {
       icon: Home,
       title: "Sach- & Rechtsschutz",
-      description: "Haftpflicht-, Hausrat-, und Rechtsschutzversicherungen zum Schutz Ihres Eigentums und Ihrer Rechte."
+      description: "Haftpflicht-, Hausrat- und Rechtsschutzversicherungen zum Schutz Ihres Eigentums und Ihrer Rechte."
     },
     {
       icon: PiggyBank,
@@ -37,7 +37,7 @@ const Services: React.FC = () => {
     }
   ];
 
-  const Businesskunden = [
+  const businesskunden = [
     {
       icon: Building,
       title: "Unternehmensabsicherung",
@@ -67,7 +67,7 @@ const Services: React.FC = () => {
         <div className="container-custom">
           <h1 className="font-bold mb-4">Meine Leistungen</h1>
           <p className="text-xl text-gray-600">
-            Umfassende Versicherungslösungen für Privat- und Gewerbekunden.
+            Umfassende Versicherungslösungen für Privat- und Geschäftskunden
           </p>
         </div>
       </section>
@@ -81,7 +81,7 @@ const Services: React.FC = () => {
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {Privatkunden.map((service, index) => (
+            {privatkunden.map((service, index) => (
               <ServiceCard
                 key={index}
                 icon={service.icon}
@@ -98,11 +98,11 @@ const Services: React.FC = () => {
         <div className="container-custom">
           <SectionTitle 
             title="Rundum-Schutz für Ihr Unternehmen" 
-            subtitle="Spezielle Lösungen für Gewerbekunden und Selbständige"
+            subtitle="Spezielle Lösungen für Geschäftskunden und Selbstständige"
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {Businesskunden.map((service, index) => (
+            {businesskunden.map((service, index) => (
               <ServiceCard
                 key={index}
                 icon={service.icon}
