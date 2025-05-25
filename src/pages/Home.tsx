@@ -116,7 +116,7 @@ const Home: React.FC = () => {
               <p className="text-gray-600 mb-6">
                 Strategische Versicherungslösungen für Unternehmer und Betriebe - mit Fokus auf Absicherung, Mitarbeiterbindung und Zukunftssicherheit.
               </p>
-              <Link to="/Businesscheck" className="btn-primary">
+              <Link to="/BusinessCheck" className="btn-primary">
                 Erfahren für Unternehmen
               </Link>
             </div>
