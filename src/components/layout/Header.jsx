@@ -168,7 +168,7 @@ const Header = () => {
               Businesskunden
             </NavLink>
             <NavLink 
-              to="/services/Businesscheck" 
+              to="/services/BusinessCheck" 
               className={({ isActive }) => 
                 `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
               }
