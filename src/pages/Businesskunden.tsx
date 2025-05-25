@@ -162,7 +162,7 @@ const Businesskunden: React.FC = () => {
               (Hinweis: Der Check ersetzt keine vollständige Risikoanalyse.)
             </p>
             <Link 
-              to="/Businesscheck" 
+              to="/BusinessCheck" 
               className="btn-primary"
             >
               Jetzt ersten Check durchführen
