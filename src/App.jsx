@@ -10,7 +10,7 @@ import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
 import PrivateCheck from './pages/PrivateCheck';
 import Businesskunden from "./pages/Businesskunden";
-import Businesscheck from "./pages/Businesscheck";
+import BusinessCheck from "./pages/BusinessCheck";
 import Privatkunden from './pages/Privatkunden';
 
 function App() {
