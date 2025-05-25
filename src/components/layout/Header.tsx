@@ -34,128 +34,163 @@ const Header: React.FC = () => {
           />
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
-          <NavLink 
-            to="/" 
-            className={({ isActive }) => 
-              `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
-            }
-          >
-            Startseite
-          </NavLink>
-          <NavLink 
-            to="/fuer-wen" 
-            className={({ isActive }) => 
-              `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
-            }
-          >
-            Für Wen
-          </NavLink>
-          <NavLink 
-            to="/arbeitsweise" 
-            className={({ isActive }) => 
-              `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
-            }
-          >
-            Arbeitsweise
-          </NavLink>
-          <NavLink 
-            to="/Privatkunden" 
-            className={({ isActive }) => 
-              `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
-            }
-          >
-            Privatkunden
-          </NavLink>
-          <NavLink 
-            to="/Businesskunden" 
-            className={({ isActive }) => 
-              `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
-            }
-          >
-            Businesskunden
-          </NavLink>
-          <NavLink 
-            to="/kontakt" 
-            className={({ isActive }) => 
-              `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
-            }
-          >
-            Kontakt
-          </NavLink>
-        </nav>
+     {/* Desktop Navigation */}
+<nav className="hidden md:flex space-x-8">
+  <NavLink 
+    to="/" 
+    className={({ isActive }) => 
+      `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
+    }
+  >
+    Startseite
+  </NavLink>
+  <NavLink 
+    to="/fuer-wen" 
+    className={({ isActive }) => 
+      `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
+    }
+  >
+    Für Wen
+  </NavLink>
+  <NavLink 
+    to="/arbeitsweise" 
+    className={({ isActive }) => 
+      `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
+    }
+  >
+    Arbeitsweise
+  </NavLink>
+  <NavLink 
+    to="/Privatkunden" 
+    className={({ isActive }) => 
+      `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
+    }
+  >
+    Privatkunden
+  </NavLink>
+  <NavLink 
+    to="/PrivateCheck" 
+    className={({ isActive }) => 
+      `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
+    }
+  >
+    PrivateCheck
+  </NavLink>
+  <NavLink 
+    to="/Businesskunden" 
+    className={({ isActive }) => 
+      `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
+    }
+  >
+    Businesskunden
+  </NavLink>
+  <NavLink 
+    to="/BusinessCheck" 
+    className={({ isActive }) => 
+      `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
+    }
+  >
+    BusinessCheck
+  </NavLink>
+  <NavLink 
+    to="/kontakt" 
+    className={({ isActive }) => 
+      `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
+    }
+  >
+    Kontakt
+  </NavLink>
+</nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-gray-dark focus:outline-none"
-          onClick={toggleMenu}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
 
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg animate-fade-in">
-          <nav className="container-custom py-4 flex flex-col space-y-4">
-            <NavLink 
-              to="/" 
-              className={({ isActive }) => 
-                `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
-              }
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Startseite
-            </NavLink>
-            <NavLink 
-              to="/fuer-wen" 
-              className={({ isActive }) => 
-                `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
-              }
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Für Wen
-            </NavLink>
-            <NavLink 
-              to="/arbeitsweise" 
-              className={({ isActive }) => 
-                `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
-              }
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Arbeitsweise
-            </NavLink>
-            <NavLink 
-              to="/Privatkunden" 
-              className={({ isActive }) => 
-                `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
-              }
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Privatkunden
-            </NavLink>
-            <NavLink 
-              to="/Businesskunden" 
-              className={({ isActive }) => 
-                `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
-              }
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Businesskunden
-            </NavLink>
-            <NavLink 
-              to="/kontakt" 
-              className={({ isActive }) => 
-                `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
-              }
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Kontakt
-            </NavLink>
-          </nav>
-        </div>
-      )}
+       {/* Mobile Menu Button */}
+<button
+  className="md:hidden text-gray-dark focus:outline-none"
+  onClick={toggleMenu}
+>
+  {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+</button>
+</div>
+
+{/* Mobile Navigation */}
+{isMenuOpen && (
+  <div className="md:hidden bg-white shadow-lg animate-fade-in">
+    <nav className="container-custom py-4 flex flex-col space-y-4">
+      <NavLink 
+        to="/" 
+        className={({ isActive }) => 
+          `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
+        }
+        onClick={() => setIsMenuOpen(false)}
+      >
+        Startseite
+      </NavLink>
+      <NavLink 
+        to="/fuer-wen" 
+        className={({ isActive }) => 
+          `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
+        }
+        onClick={() => setIsMenuOpen(false)}
+      >
+        Für Wen
+      </NavLink>
+      <NavLink 
+        to="/arbeitsweise" 
+        className={({ isActive }) => 
+          `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
+        }
+        onClick={() => setIsMenuOpen(false)}
+      >
+        Arbeitsweise
+      </NavLink>
+      <NavLink 
+        to="/Privatkunden" 
+        className={({ isActive }) => 
+          `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
+        }
+        onClick={() => setIsMenuOpen(false)}
+      >
+        Privatkunden
+      </NavLink>
+      <NavLink 
+        to="/PrivateCheck" 
+        className={({ isActive }) => 
+          `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
+        }
+        onClick={() => setIsMenuOpen(false)}
+      >
+        PrivateCheck
+      </NavLink>
+      <NavLink 
+        to="/Businesskunden" 
+        className={({ isActive }) => 
+          `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
+        }
+        onClick={() => setIsMenuOpen(false)}
+      >
+        Businesskunden
+      </NavLink>
+      <NavLink 
+        to="/BusinessCheck" 
+        className={({ isActive }) => 
+          `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
+        }
+        onClick={() => setIsMenuOpen(false)}
+      >
+        BusinessCheck
+      </NavLink>
+      <NavLink 
+        to="/kontakt" 
+        className={({ isActive }) => 
+          `block py-2 font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
+        }
+        onClick={() => setIsMenuOpen(false)}
+      >
+        Kontakt
+      </NavLink>
+    </nav>
+  </div>
+)}
     </header>
   );
 };
