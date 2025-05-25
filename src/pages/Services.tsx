@@ -65,7 +65,7 @@ const Services: React.FC = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gray-light">
         <div className="container-custom">
-          <h1 className="font-bold mb-4">Meine Leistungen</h1>
+          <h1 className="font-bold mb-4">Unsere Leistungen</h1>
           <p className="text-xl text-gray-600">
             Umfassende Versicherungslösungen für Privat- und Geschäftskunden
           </p>
@@ -90,6 +90,15 @@ const Services: React.FC = () => {
               />
             ))}
           </div>
+          
+          <div className="text-center mt-8">
+            <Link 
+              to="/services/privatkunden" 
+              className="btn-primary"
+            >
+              Mehr zu Privatkunden
+            </Link>
+          </div>
         </div>
       </section>
       
@@ -110,6 +119,15 @@ const Services: React.FC = () => {
                 description={service.description}
               />
             ))}
+          </div>
+          
+          <div className="text-center mt-8">
+            <Link 
+              to="/services/businesskunden" 
+              className="btn-primary"
+            >
+              Mehr zu Geschäftskunden
+            </Link>
           </div>
         </div>
       </section>
@@ -132,7 +150,7 @@ const Services: React.FC = () => {
             <div className="hidden md:block">
               <img 
                 src="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                alt="Beratungsgespräch" 
+                alt="Persönliches Beratungsgespräch" 
                 className="rounded-lg shadow-lg w-full h-80 object-cover"
               />
             </div>
