@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import Process from './pages/Process';
@@ -14,26 +14,30 @@ import TargetAudience from './pages/TargetAudience';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="arbeitsweise" element={<Process />} />
-        <Route path="fuer-wen" element={<TargetAudience />} />
-        <Route path="services">
-          <Route path="Privatkunden">
-            <Route index element={<Privatkunden />} />
-            <Route path="PrivateCheck" element={<PrivateCheck />} />
-          </Route>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="arbeitsweise" element={<Process />} />
+          <Route path="fuer-wen" element={<TargetAudience />} />
+
+          {/* Services Section */}
           <Route path="services">
-            <Route index element={<Businesskunden />} />
-            <Route path="BusinessCheck" element={<BusinessCheck />} />
+            <Route path="Privatkunden" element={<Privatkunden />}>
+              <Route path="PrivateCheck" element={<PrivateCheck />} />
+            </Route>
+            <Route path="Businesskunden" element={<Businesskunden />}>
+              <Route path="BusinessCheck" element={<BusinessCheck />} />
+            </Route>
           </Route>
+
+          {/* Other Pages */}
+          <Route path="kontakt" element={<Contact />} />
+          <Route path="impressum" element={<Impressum />} />
+          <Route path="datenschutz" element={<Datenschutz />} />
         </Route>
-        <Route path="kontakt" element={<Contact />} />
-        <Route path="impressum" element={<Impressum />} />
-        <Route path="datenschutz" element={<Datenschutz />} />
-      </Route>
-    </Routes>
+      </Routes>
+    </Router>
   );
 }
 
