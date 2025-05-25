@@ -1,5 +1,5 @@
 import React from 'react';
-import { DivideIcon as LucideIcon } from 'lucide-react';
+import { LucideIcon } from 'lucide-react';
 
 interface ProcessStepProps {
   step: number;
@@ -17,14 +17,16 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
   return (
     <div className="flex items-start space-x-4 md:space-x-6">
       <div className="flex-shrink-0">
-        <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white">
-          <Icon size={24} aria-hidden="true" />
+        <div 
+          className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white"
+          aria-hidden="true"
+        >
+          <Icon size={24} />
         </div>
       </div>
       <div>
         <h3 className="font-semibold text-xl mb-2">
-          <span className="sr-only">Schritt {step}: </span>
-          {title}
+          <span className="sr-only">Schritt {step}:</span> {title}
         </h3>
         <p className="text-gray-600">{description}</p>
       </div>
