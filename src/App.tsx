@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import Process from './pages/Process';
@@ -8,9 +8,10 @@ import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
 import Privatkunden from './pages/Privatkunden';
 import PrivateCheck from './pages/PrivateCheck';
-import Businesskunden from "./pages/Businesskunden";
-import BusinessCheck from "./pages/BusinessCheck";
+import Businesskunden from './pages/Businesskunden';
+import BusinessCheck from './pages/BusinessCheck';
 import TargetAudience from './pages/TargetAudience';
+import Services from './pages/Services';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
           <Route path="fuer-wen" element={<TargetAudience />} />
 
           {/* Services Section */}
-          <Route path="services">
+          <Route path="services" element={<Services />}>
             <Route path="Privatkunden" element={<Privatkunden />}>
               <Route path="PrivateCheck" element={<PrivateCheck />} />
             </Route>
