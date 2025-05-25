@@ -72,7 +72,7 @@ const Header = () => {
               `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
             }
           >
-            Private Check
+            PrivateCheck
           </NavLink>
           <NavLink 
             to="/services/Businesskunden" 
