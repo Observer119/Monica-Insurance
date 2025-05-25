@@ -7,7 +7,7 @@ import Contact from './pages/Contact';
 import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
 import Privatkunden from './pages/Privatkunden';
-import PrivateCheck from './pages/PrivateCheck';
+import SelbstCheck from './pages/SelbstCheck';
 import Businesskunden from './pages/Businesskunden';
 import BusinessCheck from './pages/BusinessCheck';
 import TargetAudience from './pages/TargetAudience';
@@ -24,7 +24,7 @@ function App() {
           <Route index element={<Services />} />
           <Route path="privatkunden">
             <Route index element={<Privatkunden />} />
-            <Route path="check" element={<PrivateCheck />} />
+            <Route path="selbst-check" element={<SelbstCheck />} />
           </Route>
           <Route path="businesskunden">
             <Route index element={<Businesskunden />} />
