@@ -156,7 +156,7 @@ const Header = () => {
               }
               onClick={() => setIsMenuOpen(false)}
             >
-              Private Check
+              PrivateCheck
             </NavLink>
             <NavLink 
               to="/services/Businesskunden" 
