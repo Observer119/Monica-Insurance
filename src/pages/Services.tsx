@@ -14,7 +14,7 @@ import SectionTitle from '../components/ui/SectionTitle';
 import ServiceCard from '../components/ui/ServiceCard';
 
 const Services: React.FC = () => {
-  const privateServices = [
+  const Privatkunden = [
     {
       icon: Heart,
       title: "Gesundheitsabsicherung",
