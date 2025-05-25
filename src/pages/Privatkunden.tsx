@@ -1,6 +1,5 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 import {  
   Heart,  
   Home,  
@@ -141,7 +140,7 @@ const Privatkunden = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link  
-              to="check"  
+              to="selbst-check"  
               className="btn bg-white text-primary hover:bg-gray-100"
             >
               Jetzt Schnellcheck starten
