@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          {/* Standort (Updated to Munich & Germany-wide) */}
+          {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <img 
@@ -21,64 +21,70 @@ const Footer: React.FC = () => {
               Ihre persönliche Ansprechpartnerin für maßgeschneiderte Versicherungslösungen in München und ganz Deutschland.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors">
+              <a 
+                href="https://facebook.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white hover:text-primary transition-colors"
+                aria-label="Facebook"
+              >
                 <Facebook size={20} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors">
+              <a 
+                href="https://instagram.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white hover:text-primary transition-colors"
+                aria-label="Instagram"
+              >
                 <Instagram size={20} />
               </a>
             </div>
           </div>
 
-          {/* Kontakt (Updated to include Mobile) */}
+          {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Kontakt</h3>
             <ul className="space-y-3">
-            <li className="flex items-center space-x-2">
-          <Phone size={18} />
-      <div>
-      <span className="text-white font-semibold">Kontakt:</span>
-      </div>
-      </li>
-      <li className="flex items-center space-x-2">
-    <Phone size={18} />
-    <div>
-      <a href="tel:+491711144557" className="text-gray-300 hover:text-primary transition-colors">
-        Mobil: +49 171 1144557
-      </a>
-      <span className="text-gray-400 text-sm block">(auch WhatsApp)</span>
-    </div>
-  </li>
-  <li className="flex items-center space-x-2">
-    <Mail size={18} />
-    <a href="mailto:m.meier@vorsorgewerk24.de" className="text-gray-300 hover:text-primary transition-colors">
-      m.meier@vorsorgewerk24.de
-    </a>
-  </li>
-</ul>
+              <li className="flex items-center space-x-2">
+                <Phone size={18} />
+                <div>
+                  <a href="tel:+491711144557" className="text-gray-300 hover:text-primary transition-colors">
+                    Mobil: +49 171 1144557
+                  </a>
+                  <span className="text-gray-400 text-sm block">(auch WhatsApp)</span>
+                </div>
+              </li>
+              <li className="flex items-center space-x-2">
+                <Mail size={18} />
+                <a href="mailto:m.meier@vorsorgewerk24.de" className="text-gray-300 hover:text-primary transition-colors">
+                  m.meier@vorsorgewerk24.de
+                </a>
+              </li>
+            </ul>
           </div>
 
-          {/* Services (Added Privatkunden) */}
+          {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services/Privatkunden" className="text-gray-300 hover:text-primary transition-colors">
+                <Link to="/services/privatkunden" className="text-gray-300 hover:text-primary transition-colors">
                   Privatkunden
                 </Link>
               </li>
               <li>
-                <Link to="/PrivateCheck" className="text-gray-300 hover:text-primary transition-colors">
+                <Link to="/services/privatkunden/private-check" className="text-gray-300 hover:text-primary transition-colors">
                   PrivateCheck
                 </Link>
               </li>
               <li>
-                <Link to="/Businesskunden" className="text-gray-300 hover:text-primary transition-colors">
-        Businesskunden
-            </Link>
-        </li>
-        <li>
-          <Link to="/BusinessCheck" className="text-gray-300 hover:text-primary transition-colors">
+                <Link to="/services/businesskunden" className="text-gray-300 hover:text-primary transition-colors">
+                  Geschäftskunden
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/businesskunden/business-check" className="text-gray-300 hover:text-primary transition-colors">
                   BusinessCheck
                 </Link>
               </li>
@@ -94,7 +100,6 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
