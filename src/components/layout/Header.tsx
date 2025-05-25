@@ -24,7 +24,7 @@ const Header: React.FC = () => {
     { path: '/fuer-wen', label: 'Für Wen' },
     { path: '/arbeitsweise', label: 'Arbeitsweise' },
     { path: '/services/privatkunden', label: 'Privatkunden' },
-    { path: '/services/privatkunden/check', label: 'PrivateCheck' },
+    { path: '/services/privatkunden/selbst-check', label: 'Selbst-Check' },
     { path: '/services/businesskunden', label: 'Geschäftskunden' },
     { path: '/services/businesskunden/check', label: 'BusinessCheck' },
     { path: '/kontakt', label: 'Kontakt' }
