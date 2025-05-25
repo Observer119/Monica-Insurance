@@ -90,7 +90,7 @@ const Services: React.FC = () => {
               />
             ))}
           </div>
-          
+
           <div className="text-center mt-8">
             <Link 
               to="/services/privatkunden" 
@@ -120,7 +120,7 @@ const Services: React.FC = () => {
               />
             ))}
           </div>
-          
+
           <div className="text-center mt-8">
             <Link 
               to="/services/businesskunden" 
