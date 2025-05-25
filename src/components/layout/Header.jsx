@@ -88,7 +88,7 @@ const Header = () => {
               `font-medium hover:text-primary transition-colors ${isActive ? 'text-primary' : ''}`
             }
           >
-            Businesscheck
+            BusinessCheck
           </NavLink>
           <NavLink 
             to="/kontakt" 
