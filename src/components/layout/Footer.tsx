@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/services/privatkunden/private-check" className="text-gray-300 hover:text-primary transition-colors">
+                <Link to="/services/privatkunden/check" className="text-gray-300 hover:text-primary transition-colors">
                   PrivateCheck
                 </Link>
               </li>
@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/services/businesskunden/business-check" className="text-gray-300 hover:text-primary transition-colors">
+                <Link to="/services/businesskunden/check" className="text-gray-300 hover:text-primary transition-colors">
                   BusinessCheck
                 </Link>
               </li>
