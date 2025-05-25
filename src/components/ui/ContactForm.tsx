@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
+import * as emailjs from '@emailjs/browser';
+
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     phone: '',
@@ -14,6 +22,8 @@ const ContactForm: React.FC = () => {
     message: string;
   } | null>(null);
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -21,23 +31,46 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    setFormStatus({
-      submitted: true,
-      success: true,
-      message: 'Vielen Dank für Ihre Nachricht! Ich werde mich zeitnah bei Ihnen melden.',
-    });
-    
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
-    });
-    
-    setTimeout(() => {
-      setFormStatus(null);
-    }, 5000);
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      setFormStatus({
+        submitted: true,
+        success: true,
+        message: 'Vielen Dank für Ihre Nachricht! Ich werde mich zeitnah bei Ihnen melden.',
+      });
+
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+      });
+
+      setTimeout(() => {
+        setFormStatus(null);
+      }, 5000);
+    } catch (error) {
+      setFormStatus({
+        submitted: true,
+        success: false,
+        message: 'Entschuldigung, es gab einen Fehler beim Senden. Bitte versuchen Sie es später erneut.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -114,9 +147,10 @@ const ContactForm: React.FC = () => {
       
       <button
         type="submit"
-        className="btn-primary w-full"
+        disabled={isSubmitting}
+        className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Nachricht senden
+        {isSubmitting ? 'Wird gesendet...' : 'Nachricht senden'}
       </button>
     </form>
   );
