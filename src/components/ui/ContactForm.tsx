@@ -4,6 +4,7 @@ const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     message: '',
   });
 
@@ -18,24 +19,22 @@ const ContactForm: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, this would submit to a backend service
-    // For this demo, we'll just simulate a successful submission
+    
     setFormStatus({
       submitted: true,
       success: true,
-      message: 'Vielen Dank für Ihre Nachricht! Wir werden uns in Kürze bei Ihnen melden.',
+      message: 'Vielen Dank für Ihre Nachricht! Ich werde mich zeitnah bei Ihnen melden.',
     });
     
-    // Reset form after submission
     setFormData({
       name: '',
       email: '',
+      phone: '',
       message: '',
     });
     
-    // Reset status after 5 seconds
     setTimeout(() => {
       setFormStatus(null);
     }, 5000);
@@ -82,10 +81,25 @@ const ContactForm: React.FC = () => {
           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
         />
       </div>
+
+      <div>
+        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+          Telefon
+        </label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
+        />
+      </div>
       
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-          Anliegen
+          Ihre Nachricht
         </label>
         <textarea
           id="message"
