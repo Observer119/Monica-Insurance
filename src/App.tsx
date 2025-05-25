@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
 import Process from './pages/Process';
@@ -15,30 +15,28 @@ import Services from './pages/Services';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="arbeitsweise" element={<Process />} />
-          <Route path="fuer-wen" element={<TargetAudience />} />
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="arbeitsweise" element={<Process />} />
+        <Route path="fuer-wen" element={<TargetAudience />} />
 
-          {/* Services Section */}
-          <Route path="services" element={<Services />}>
-            <Route path="Privatkunden" element={<Privatkunden />}>
-              <Route path="PrivateCheck" element={<PrivateCheck />} />
-            </Route>
-            <Route path="Businesskunden" element={<Businesskunden />}>
-              <Route path="BusinessCheck" element={<BusinessCheck />} />
-            </Route>
+        {/* Services Section */}
+        <Route path="services" element={<Services />}>
+          <Route path="Privatkunden" element={<Privatkunden />}>
+            <Route path="PrivateCheck" element={<PrivateCheck />} />
           </Route>
-
-          {/* Other Pages */}
-          <Route path="kontakt" element={<Contact />} />
-          <Route path="impressum" element={<Impressum />} />
-          <Route path="datenschutz" element={<Datenschutz />} />
+          <Route path="Businesskunden" element={<Businesskunden />}>
+            <Route path="BusinessCheck" element={<BusinessCheck />} />
+          </Route>
         </Route>
-      </Routes>
-    </Router>
+
+        {/* Other Pages */}
+        <Route path="kontakt" element={<Contact />} />
+        <Route path="impressum" element={<Impressum />} />
+        <Route path="datenschutz" element={<Datenschutz />} />
+      </Route>
+    </Routes>
   );
 }
 
