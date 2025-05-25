@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services/privatkunden" className="text-gray-300 hover:text-primary transition-colors">
+                <Link to="/services/Privatkunden" className="text-gray-300 hover:text-primary transition-colors">
                   Privatkunden
                 </Link>
               </li>
