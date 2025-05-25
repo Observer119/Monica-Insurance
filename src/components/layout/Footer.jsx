@@ -45,7 +45,7 @@ const Footer = () => {
             </li>
             <li>
                 <Link to="/PrivateCheck" className="text-gray-300 hover:text-primary transition-colors">
-                  Private Check
+                  PrivateCheck
                 </Link>
               </li>
               <li>
